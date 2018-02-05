@@ -17,13 +17,27 @@ def bisection(f, a, b, maxIters, TOL, printer=False):
     xL = a
     xR = b
     #Iterations
-    n = 1
-    while n <= maxIters:
+    iter = 1
+    
+    if f(a) == 0:
+        xM = a
+        iter = 0
+        print("Root occurs at left endpoint: root = ", xM)
+        return xM
+    
+    if f(b) == 0:
+        xM = b
+        iter = 0
+        print("Root occurs at right endpoint: root = ", xM)
+        return xM
+    
+        
+    while iter <= maxIters:
         #Bisection, STEP3
         xM = (xL+xR)/2.0
         #Evaluating function in pi, STEP4 and STEP5
         if printer:
-            print('iteration',n,'=',xM)
+            print('iteration',iter,'=',xM)
         #Condition A
         if f(xM)*f(xL)<0:
             xR = xM
@@ -32,13 +46,13 @@ def bisection(f, a, b, maxIters, TOL, printer=False):
             xL = xM
         #Condition C: repeat the cycle
         if abs(f(xM)) < TOL:
-            print('root=',xM,'in',n,'iterations')
+            print('root=',xM,'in',iter,'iterations')
             break
 
-        if n == maxIters:
+        if iter == maxIters:
             print('Maximum number of iterations reached')
 
-        n+=1
+        iter += 1
     #Final result
     return xM
 
