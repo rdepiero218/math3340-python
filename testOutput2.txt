@@ -1,0 +1,15 @@
+# IPython log file
+
+%logstart
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+%logstop
+%logstart -o
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+runfile('/Users/mindup610/gitRepos/math3340-python/rootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+%logstop
+%logstart rootOutput.txt -r -o
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')
+%logstop
+runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')runfile('/Users/mindup610/gitRepos/math3340-python/rootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')runfile('/Users/mindup610/gitRepos/math3340-python/testRootMethods.py', wdir='/Users/mindup610/gitRepos/math3340-python')%logstop

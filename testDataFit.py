@@ -3,7 +3,7 @@
 """
 Created on %(date)s
 
-@author: %reggie
+@author: % reggie
 """
 import numpy as np
 import matplotlib.pyplot as plt

@@ -22,13 +22,13 @@ y_data = f(x_data)
 x_plot = np.linspace(-1,1,100)
 y_plot = f(x_plot)
 
-#[a,b,c,d] = df.splineCoeffs(x_data,y_data);
+[a,b,c,d] = df.splineCoeffs(x_data,y_data);
 #
 ##print(a,b,c,d)
 #
-#S = df.evaluateSpline(x_plot, x_data, a, b, c, d)
+S = df.evaluateSpline(x_plot, x_data, a, b, c, d)
 
-S = df.cubicSpline(x_plot, x_data, y_data)
+#S = df.cubicSpline(x_plot, x_data, y_data)
 
 
 plt.figure()

@@ -15,19 +15,40 @@ def g(x):
 TOL = 1e-5
 maxIters = 30
 
-print('---------Using Bisection-----------')
-rm.bisection(f, -1, 1, maxIters, TOL, False)
+file = open("testOutput02.txt", "w")
 
-print('---------Using Newton-----------')
+file.write('---------Using Bisection-----------\n')
+root1 = rm.bisection(f, -1, 1, maxIters, TOL, False)
+file.write("root = %5.5f\n" % root1)
 
-rm.newtonRaphson(f, fprime,-2, maxIters, TOL, True)
 
-print('---------Using Secant-----------')
-rm.secant(f, -0.5, 0.5 , maxIters, TOL, False)
+file.write('---------Using Newton-----------\n')
+root2 = rm.newtonRaphson(f, fprime,-2, maxIters, TOL, True)
+file.write("root = %5.5f\n" % root2)
 
-print('---------False Position-----------')
+file.write('---------Using Secant-----------\n')
+root3 = rm.secant(f, -0.5, 0.5 , maxIters, TOL, False)
+file.write("root = %5.5f\n" % root3)
 
-rm.falsePosition(f, -0.5, 0.5, maxIters, TOL, False)
+
+file.write('---------Using False Position-----------\n')
+root4 = rm.falsePosition(f, -0.5, 0.5, maxIters, TOL, False)
+file.write("root = %5.5f\n" % root4)
+file.close()
+
+#print('---------Using Bisection-----------')
+#rm.bisection(f, -1, 1, maxIters, TOL, False)
+#
+#print('---------Using Newton-----------')
+#
+#rm.newtonRaphson(f, fprime,-2, maxIters, TOL, True)
+
+#print('---------Using Secant-----------')
+#rm.secant(f, -0.5, 0.5 , maxIters, TOL, False)
+#
+#print('---------False Position-----------')
+#
+#rm.falsePosition(f, -0.5, 0.5, maxIters, TOL, False)
 
 # Uses g(x)
 

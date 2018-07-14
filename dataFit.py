@@ -83,7 +83,7 @@ def chebyshevNodes(n):
     
     return x
 
-def splineCoeffs(x_data, y_data,printer=False):
+def splineCoeffs(x_data, y_data, printer=False):
     
     N = len(x_data)
     n = len(x_data) - 1
@@ -154,6 +154,23 @@ def cubicSpline(x, x_data, y_data):
     [S] = evaluateSpline(x, x_data, a, b, c, d)
     
     return S
+
+
+def nevilleInterp(x, xdata, ydata, order):
+    n = order
+    N = order + 1
+    Q = np.zeros((N,N))
+    Q[:,0] = ydata
+
+    for i in range(1,N):
+        for j in range(1,i):
+            Q[i,j] = ( ( x - xdata[i-j] ) * Q[i, j-1] -  (x - xdata[j] ) * Q[i - 1,j - 1] ) / ( xdata[i] - xdata[i-j] );
+
+    Pnn = Q[n,n]
+    
+    return Q, Pnn
+
+
     
     
     

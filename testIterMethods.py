@@ -16,7 +16,7 @@ maxIters = 30
 x0 = np.array([ [0], [0], [0] ] )
 
 print('------------------Jacobi Method-----------------')
-[soln,iter] = im.jacobi(A,b,x0,TOL,maxIters,True)
+[soln,iter] = im.jacobi(A,b,x0,TOL,maxIters,False)
 
 print('solution to system is\n')
 print('x = {: .4f}'.format(soln[0][0]))

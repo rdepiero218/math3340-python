@@ -1,0 +1,8 @@
+---------Using Bisection-----------
+root = -0.32219
+---------Using Newton-----------
+root = -0.32219
+---------Using Secant-----------
+root = -0.32219
+---------Using False Position-----------
+root = -0.32219
