@@ -12,6 +12,9 @@ def fprime(x):
 def g(x):
     return np.cos(x) - x
 
+def h(x):
+    return 1/2 + x**2 / 4 - x* np.sin(x) - np.cos(2*x)/2
+
 TOL = 1e-5
 maxIters = 30
 
@@ -58,4 +61,7 @@ file.close()
 #print('---------False Position-----------')
 #
 #rm.falsePosition(g, 0.5, np.pi/4, 10, 1e-5, False)
+
+print('---------Using Bisection checking error Msgs -----------')
+rm.bisection(h,0 , np.pi, maxIters, TOL, False)
 
