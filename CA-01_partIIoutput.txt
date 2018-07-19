@@ -1,0 +1,4 @@
+Coding Activity Part I
+root = -3.37109
+f(root) = 0.00026
+iterations =     9

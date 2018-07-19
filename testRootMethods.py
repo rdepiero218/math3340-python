@@ -15,10 +15,15 @@ def g(x):
 def h(x):
     return 1/2 + x**2 / 4 - x* np.sin(x) - np.cos(2*x)/2
 
+def p(x):
+    return x^2 + 1
+
 TOL = 1e-5
 maxIters = 30
 
 file = open("testOutput02.txt", "w")
+
+root = root1 = rm.bisection(f, -1, 1, maxIters, TOL, False)
 
 file.write('---------Using Bisection-----------\n')
 root1 = rm.bisection(f, -1, 1, maxIters, TOL, False)
